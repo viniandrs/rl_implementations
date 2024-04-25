@@ -13,6 +13,9 @@ def plot_arrows(q_table):
     plt.grid()
 
     for position in range(48):
+        if position in range(37, 47):
+            continue
+
         y = 3 - position // 12 #+ 0.5 # divisao inteira
         x = position % 12 #+ 0.5 # resto da divisao
 
@@ -37,3 +40,5 @@ def plot_arrows(q_table):
     plt.show()
     plt.savefig('arrowplot_cliffwalking.png')
 
+def plot_alpha():
+    pass

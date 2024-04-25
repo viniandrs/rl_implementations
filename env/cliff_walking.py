@@ -1,7 +1,4 @@
-from copy import deepcopy
-
 import numpy as np
-import gymnasium as gym
 from gymnasium.envs.toy_text.cliffwalking import CliffWalkingEnv
 
 class WindyCliffWalking(CliffWalkingEnv):
