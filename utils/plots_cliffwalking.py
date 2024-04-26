@@ -74,4 +74,4 @@ def plot_arrows_from_qnet(q_net):
     plt.yticks(np.arange(5) - 0.5)
     plt.axis('scaled')
     plt.show()
-    plt.savefig('arrowplot_cliffwalking.png')
+    #plt.savefig('arrowplot_cliffwalking.png')
