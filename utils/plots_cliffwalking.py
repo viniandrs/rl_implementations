@@ -53,13 +53,12 @@ def plot_arrows_from_qnet(q_net):
     for position in range(48):
         if position in range(37, 47):
             continue
+        
+        x, y = position % 12, 3-position // 12
 
-        x = position % 12
-        y = 3 - position // 12
-        
-        qvals = q_net(torch.tensor(position, dtype=torch.float32))
+        qvals = q_net(position)
         normalized_q_values = 0.4 * torch.softmax(qvals, dim=-1).detach().numpy()
-        
+
         # cima
         plt.arrow(x, y, 0, normalized_q_values[0], head_width=0.1, head_length=0.1, fc=a, ec=a)
         # direita
@@ -73,5 +72,5 @@ def plot_arrows_from_qnet(q_net):
     plt.xticks(np.arange(13) - 0.5)
     plt.yticks(np.arange(5) - 0.5)
     plt.axis('scaled')
+    plt.savefig('arrowplot_cliffwalking.png')
     plt.show()
-    #plt.savefig('arrowplot_cliffwalking.png')
