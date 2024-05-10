@@ -12,3 +12,13 @@ class WindyCliffWalking(CliffWalkingEnv):
             obs, rew, terminated, truncated, info = super().step(2) # move down
         
         return obs, rew, terminated, truncated, info
+    
+class EasyCliffWalking(CliffWalkingEnv):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def step(self, a):
+        s, r, t, tr, i = super().step(a)
+        if t:
+            return (s, +100, t, tr, i)
+        return (s, r, t, tr, i)
