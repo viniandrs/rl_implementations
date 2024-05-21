@@ -58,7 +58,7 @@ def plot_arrows_from_qnet(q_net):
 
         qvals = q_net(position)
         T = 0.0001
-        normalized_q_values = 0.4 * torch.softmax(qvals/T, dim=-1).detach().numpy()
+        normalized_q_values = 0.4 * torch.softmax(qvals/T, dim=-1).detach().cpu().numpy()
 
         # cima
         plt.arrow(x, y, 0, normalized_q_values[0], head_width=0.1, head_length=0.1, fc=a, ec=a)
