@@ -1,7 +1,15 @@
-# rl_practice_eldorado
-Practice activities using most relevant RL algorithms on Gymnasium environments
+# Lunar Lander Solutions
+Algoritmos implementados:
+- Q-Learning tabular (Cliff-Walking)
+- Deep Q-Learning (Cliff-Walking e Lunar Lander)
+- Reinforce
+- Actor-Critic on-policy
+
+Algoritmos com resumo teórico, visualização e exercícios prontos:
+- Q-Learning tabular (Cliff-Walking)
+- Deep Q-Learning (Cliff-Walking e Lunar Lander)
 
 ## To-Do:
-- Implement learnable baselines in Reinforce
 - Implement SAC
 - Implement DDPG
+- Implement PPO
